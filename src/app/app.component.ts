@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import {FooterClickedEvent} from './components/footer/footer-clicked.event';
 
 @Component({
   selector: 'app-root',
@@ -6,5 +7,15 @@ import { Component } from '@angular/core';
   styleUrls: ['./app.component.css']
 })
 export class AppComponent {
-  title = 'developing-with-angular';
+  title = 'APP';
+  headerClicks = 0;
+  footerClicks = 0;
+
+  onTitleClicked() {
+    this.headerClicks += 1;
+  }
+
+  onHeaderClicked(event: FooterClickedEvent) {
+    this.footerClicks = event.totalClicks;
+  }
 }
