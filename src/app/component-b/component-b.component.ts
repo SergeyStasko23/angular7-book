@@ -4,7 +4,10 @@ import {ClickCounterService} from '../services/click-counter.service';
 @Component({
   selector: 'app-component-b',
   templateUrl: './component-b.component.html',
-  styleUrls: ['./component-b.component.css']
+  styleUrls: ['./component-b.component.css'],
+  providers: [
+    ClickCounterService
+  ]
 })
 export class ComponentBComponent implements OnInit {
 
